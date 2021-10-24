@@ -24,3 +24,5 @@ A data set will be created in which real video thumbnails are combined with thei
 
 
 ### Time Estimates
+
+![plot](./Gantt.png)
