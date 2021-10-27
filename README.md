@@ -1,5 +1,6 @@
 # ThumbGAN
 
+
 This repository will record progress and final result of my subbmission for the course project in Applied Deep learning.
 
 
@@ -7,7 +8,22 @@ This repository will record progress and final result of my subbmission for the 
 
 **Relevant Literature:**
 
-For PDF versions of the relevant papers please have a look at the Literature folder.
+Here listed you will find the three most relevant papers this project will draw from:
+
+The first one by Reed et al. discribes a similar method, creating images from text, but in the context of image creation from visual descriptions.
+
+The second one is a heavily cited paper introducing the technique of a skip-gram model for word embedding. I plan to use this method or one based on it to generate the word vectors used as input in conjunction with the pictures.
+
+Third is a paper by Goodfellow et al. which is heavily cited as the basis for the concept of Generative Adversarial Networks as a whole.
+
+[1] Reed, S., Akata, Z., Yan, X., Logeswaran, L., Schiele, B. &amp; Lee, H.. (2016). Generative Adversarial Text to Image Synthesis. <i>Proceedings of The 33rd International Conference on Machine Learning</i>, in <i>Proceedings of Machine Learning Research</i> 48:1060-1069 Available from https://proceedings.mlr.press/v48/reed16.html.
+
+[2] Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781.
+
+[3] Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. Advances in neural information processing systems, 27.
+
+
+For PDF versions of the relevant papers and other ones that fit the topic please have a look at the Literature folder.
 
 **Choice of Topic:** 
 Generating Video Thumbnails from Video Title Text and assigned Tags using a Generative Adversarial Network
