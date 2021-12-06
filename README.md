@@ -38,6 +38,8 @@ Their method proposes training of a Generative Adversarial Network (GAN) to synt
 
 A data set will be created in which real video thumbnails are combined with their title and tags as found on YouTube.com. This will be done making use of the API provided by YouTube itself. Due to the large diversity on YouTube a sub selection of search terms will be chosen to serve as a basis for data collection. This hopefully enables the network to find patterns more easily thereby keeping the size of the training set at a reasonable level. 
 
+To set a reasonable goal and to quantify the concept of a "passable" image two thresholds are defined. The first is the percentage of percentage of images correctly classified as real by the dicriminator. The second is the percentage of pictures created bu the generator that could fool the discriminator. Each of these values alone does not identify a model as 'good', but in conjunction they create a quantifyable standard to work towards.
+
 
 ### Time Estimates
 
