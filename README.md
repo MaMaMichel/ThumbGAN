@@ -32,7 +32,7 @@ Generating Video Thumbnails from Video Title Text and assigned Tags using a Gene
 
 **Project Description:**
 
-The main goal for this project is to create and train a network that can generate passable YouTube video thumbnails based on a title and a set of tags. The network in question shall be structured similarly to what is described in Reed et al. (2016), Generative Adversarial Text to Image Synthesis. 
+The main goal for this project is to create and train a network that can generate passable YouTube video thumbnails based on the title. The network in question shall be structured similarly to what is described in Reed et al. (2016), Generative Adversarial Text to Image Synthesis. 
 
 Their method proposes training of a Generative Adversarial Network (GAN) to synthesize pictures based on vector embeddings of a sentence describing the picture contents. I want to follow this approach regarding the network structure, but use a different method to generate the word embeddings for its input. In the past I achieved good results using pre-trained word vectors, provided for example as part of the fastText library, as input for neural networks. This seems to me to be a logical decision as it reduces the scale of the project in an aspect that is not its primary scope.
 
