@@ -45,6 +45,16 @@ To set a reasonable goal and to quantify the concept of a "passable" image two t
 
 ![plot](./Gantt.png)
 
+Due to the encounterd difficulty of the YT API Quota limit and the resulting time spent to find a work-around most of the time planned for creating and designing a model were moved back to be dealt with after the data set is completed.
+
+Thus far I have spent around 35 to 40 hours in blocked sessions of 2 to 6 hours. 
+
+The tasks 'Define Data Collection Rules' and 'Implement YT API Tool' were practically merged into one because of the encountered road blocks and took around 15 hours or three sessions. Accurately measuring the time spent on these tasks is difficult because a lot of it was done between sessions thinking of viable solutions.
+
+Actually, collecting the data after that went smoothly for the data frame part (The video IDs, Titles, and Thumbnail URLS) but collection of the thumbnail JPG files took far longer than expected. Another three sessions were necessary to create a robust system to download the files. Although the data makes up only about 2  GB due to the large number of individual files the actual download took 2 days with constant monitoring and restarts in case of a loss of network connection.
+
+Finally another 10 hours were spent collecting the vectorization model and finalizing the word vectors. Due to the large scale of the fasttext vectorization model (8.2 GB of Ram for the model alone) I ran into limitations regarding the hardware of my personal computer (16 GB RAM). 
+
 ## Intermediate Results
 
 ### Data Collection
