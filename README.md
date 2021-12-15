@@ -95,7 +95,9 @@ As it stands now the data encompasses 448789 unique videos.
 
 As of now, I have yet to implement and deploy the GAN architecture described in the paper of Reed et al. As an intermediate result and in order to have a working model for this hand-in I adapted the GAN shown in the lectures to fit my dataset. I wrote a custom data loader function to load a part of the created dataset and adapted the generator and discriminator to fit the shape of the data. Lastly, I updated the function showcasing intermediate results to fit the aspect ratio of the thumbnail pictures.
 
-Pictures the generator creates at the moment are not resembling much of any shape or form of the input data. It can however be seen that the model technically works. Most of the thumbnails do not share the aspect ratio of 4:3 that Youtube expects. Black bars are therefore visible at the top and the bottom of many thumbnails. This is a characteristic that the model quickly learns.
+Pictures the generator creates at the moment are not resembling much of any shape or form of the input data. It can however be seen that the model technically works. Most of the thumbnails on Youtube.com do not share the aspect ratio of 4:3 that Youtube expects. Black bars are therefore visible at the top and the bottom of many thumbnails. This is a characteristic that the model quickly learns.
 
 
 ![plot](./intermediate_results.png)
+
+Next step of the project will be to implement a more complex GAN architecture and use it to train on the complete data set.
