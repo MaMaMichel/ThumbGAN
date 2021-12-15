@@ -44,3 +44,39 @@ To set a reasonable goal and to quantify the concept of a "passable" image two t
 ### Time Estimates
 
 ![plot](./Gantt.png)
+
+## Intermediate Results
+
+### Data Collection
+
+Data collection is done in five steps, each step is performed in a separat python notebook.
+
+- Scraper.ipynb
+
+This notebook handles interaction with the YT API in order to gather the raw data. It includes multiple ways to scrape data. Due to Youtubes API quota not all ways to search are equally feasible. Searching for keywords is very costly and could only generate around 5000 videos per day. Searching for playlists by keyword and then gathering videos from the playlists is very inexpensive but introduces some duplicates. Efficiency of this method is further improved by letting the search results be ordered by the amount of videos in the playlists. This does not result in additional costs but increases the number of videos scraped per keyword search.
+
+- removeDuplicates.ipynb
+
+Because I opted for the second method to scrape data the removal of duplicates is necessary.
+
+- getPictures.ipynb
+
+Youtube does not provide the thumbnail picture itself but rather URLs to the picture in different resolutions. In this notebook the thumbnail of each video in the dataset is downloaded in the lowest quality. This can easily be changed in the code to result in the best quality being loaded.
+
+- cleanUp.ipynb
+
+In this Notebook the scraped data is cleaned up.
+First, the instances that did not include a valid thumbnail link are removed (missing.txt in each subset folder).
+Second, the title text is cleaned and standardized to make it ready for vectorization.
+This includes casting all titles to lower case and replacing emojis with their test counter parts.
+
+- vectorize.ipynb
+
+The python library fasttext is used in combination with a pre-trained model available from their website to translate the title strings in the dataset to word vector representations.
+To make the process of translation quicker, a vocablulatry set of all words in the data set is created, these are then translated to vector representations. Vocablulary and translation form a lookup table which is then used to add a word vector column to the data set. For the time the low number of 25 dimensions per word vector was used.
+
+The final dataset CSV files and a folder with the pictures in low quality (120\*90) is available at:
+
+https://archive.org/details/YT-Thumbnail-DataSet
+
+As it stands now the data encompasses 448789 unique videos.
