@@ -45,6 +45,16 @@ To set a reasonable goal and to quantify the concept of a "passable" image two t
 
 ![plot](./Gantt.png)
 
+Due to the encounterd difficulty of the YT API Quota limit (see Data Collection - Scraper.ipynb) and the resulting time spent to find a work-around most of the time planned for creating and designing a model were moved back to be dealt with after the data set is completed.
+
+Thus far I have spent around 35 to 40 hours in blocked sessions of 2 to 6 hours. 
+
+The tasks 'Define Data Collection Rules' and 'Implement YT API Tool' were practically merged into one because of the encountered road blocks and took around 15 hours or three sessions. Accurately measuring the time spent on these tasks is difficult because a lot of it was done between sessions thinking of viable solutions.
+
+Actually, collecting the data after that went smoothly for the data frame part (The video IDs, Titles, and Thumbnail URLS) but collection of the thumbnail JPG files took far longer than expected. Another three sessions were necessary to create a robust system to download the files. Although the data makes up only about 2  GB due to the large number of individual files the actual download took 2 days with constant monitoring and restarts in case of a loss of network connection.
+
+Finally another 10 hours were spent collecting the vectorization model and finalizing the word vectors. Due to the large scale of the fasttext vectorization model (8.2 GB of Ram for the model alone) I ran into limitations regarding the hardware of my personal computer (16 GB RAM). 
+
 ## Intermediate Results
 
 ### Data Collection
@@ -80,3 +90,12 @@ The final dataset CSV files and a folder with the pictures in low quality (120\*
 https://archive.org/details/YT-Thumbnail-DataSet
 
 As it stands now the data encompasses 448789 unique videos.
+
+### Machine Learning Model
+
+As of now, I have yet to implement and deploy the GAN architecture described in the paper of Reed et al. As an intermediate result and in order to have a working model for this hand-in I adapted the GAN shown in the lectures to fit my dataset. I wrote a custom data loader function to load a part of the created dataset and adapted the generator and discriminator to fit the shape of the data. Lastly, I updated the function showcasing intermediate results to fit the aspect ratio of the thumbnail pictures.
+
+Pictures the generator creates at the moment are not resembling much of any shape or form of the input data. It can however be seen that the model technically works. Most of the thumbnails do not share the aspect ratio of 4:3 that Youtube expects. Black bars are therefore visible at the top and the bottom of many thumbnails. This is a characteristic that the model quickly learns.
+
+
+![plot](./intermediate_results.png)
