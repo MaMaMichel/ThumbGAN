@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 data-aquisition/key
+
+data-aquisition/ImagesLarge
