@@ -97,7 +97,7 @@ lookUpDict = pickle.load(open( "./lookUpDict25.pickle", "rb" ))
 
 #generator = torch.load('./generator_cat_144000')
 generator = GeneratorDeconv()
-generator.load_state_dict(torch.load('./state_dict_cat3_50000'))
+generator.load_state_dict(torch.load('./state_dict_cat3_50000', map_location=torch.device('cpu')))
 
 
 ## Cant put model in eval mode bacuse batch normalization layer would return NaN
@@ -200,9 +200,8 @@ while True:
             
 
 
-#window.close()
+window.close()
 
-#japanese symbol for beginner excel red heart smiling cat with heart eyes red heart 4
 
 
 
